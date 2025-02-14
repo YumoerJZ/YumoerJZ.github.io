@@ -27,6 +27,8 @@ body {
     transition: opacity 0.5s ease;
     margin-top: -10px;
     align-self: center;
+    max-width: 100%; /* 确保容器宽度不超过屏幕宽度 */
+    overflow-x: auto; /* 当内容超出宽度时显示滚动条 */
 }
 
 #animation-container.show {
@@ -42,8 +44,29 @@ body {
     white-space: pre;
     opacity: 0;
     transition: opacity 0.5s ease;
+    max-width: 100%; /* 确保容器宽度不超过屏幕宽度 */
+    overflow-x: auto; /* 当内容超出宽度时显示滚动条 */
 }
 
 #fireworks-container.show {
     opacity: 1;
+}
+
+/* 媒体查询，针对小屏幕设备（如手机） */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* 减少页面内边距 */
+    }
+
+    #text-container {
+        font-size: 16px; /* 减小文字大小 */
+    }
+
+    #animation-container {
+        font-size: 10px; /* 减小字符动画字体大小 */
+    }
+
+    #fireworks-container {
+        font-size: 12px; /* 减小烟花动画字体大小 */
+    }
 }
