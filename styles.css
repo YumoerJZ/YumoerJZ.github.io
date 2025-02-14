@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#text-container {
+    white-space: pre-wrap;
+    font-size: 20px;
+    margin-bottom: 20px;
+    transition: opacity 0.5s ease;
+}
+
+#animation-container {
+    font-size: 12px;
+    white-space: pre;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin-top: -10px;
+    align-self: center;
+}
+
+#animation-container.show {
+    opacity: 1;
+}
+
+#fireworks-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    white-space: pre;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#fireworks-container.show {
+    opacity: 1;
+}
